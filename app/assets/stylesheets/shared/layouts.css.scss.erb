@@ -1,0 +1,471 @@
+@import '../variables';
+/** Headers and Background **/
+
+#main-header {
+  position: fixed;
+  height: 60px;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  line-height: 60px;
+  font-size: 32px;
+  z-index: 3;
+  background: $turq;
+  color: white;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.09);
+}
+
+.grey-back-wrapper {
+  width: 100%;
+  background: $light-grey;
+}
+
+#back-link {
+  position: absolute;
+  left: 10px;
+  color: white;
+  height: 44px;
+  line-height: 44px;
+  cursor: pointer;
+}
+
+.desk-text-header {
+  display: block;
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  font-size: 16px;
+}
+
+.main-logo {
+  position: absolute;
+  left: calc(50% - 360px);
+  top: 13px;
+  width: 140px;
+}
+
+.whos-going {
+  position: absolute;
+  left: calc(50% - 360px);
+  top: 13px;
+  width: 140px;
+}
+
+.whos-going.desk-text-header {
+  position: static;
+}
+
+.main-logo.text, .whos-going.text {
+  left: calc(50% - 150px);
+  width: 300px;
+  text-align: center;
+  font-size: 16px;
+  line-height: 60px;
+  height: 60px;
+  top: 0;
+}
+
+#header-right {
+  font-size: 16px;
+}
+
+#header-right-pic {
+  width: auto;
+  height: auto;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius:  50px;
+  right: calc(50% - 360px);
+  position: fixed;
+}
+
+#header-right-pic.btn {
+  padding: 0px 10px;
+}
+
+img#header-right-pic {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  right: calc(50% - 360px);
+}
+
+#header-right-pic.done{
+  display: none;
+}
+
+.header-pic-container {
+  position: relative;
+  width: auto;
+  height: 40px;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.header-pic-container:hover .profile-tooltip, .header-pic-container:hover .tail  {
+  display: block;
+  font-size: 16px;
+}
+
+.header-pic-container .profile-tooltip {
+  width: 200px;
+  height: 80px;
+  bottom: -80px;
+  right: calc(50vw - 490px);
+  left: auto;
+}
+
+.logout {
+  color: white;
+}
+.header-pic-container .tail {
+  right: calc(50vw - 390px);
+  left: auto;
+}
+
+#counter-header {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  background: $light-grey;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+#content-container {
+	position: absolute;
+	width: 100%;
+	min-height: calc(100% - 60px);
+	top: 60px;
+	background-size: 100%;
+	background-position: center;
+	box-sizing: border-box;
+}
+
+.results-bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+body {
+	background: #efefef;
+}
+
+body.landing {
+	background: none;
+}
+
+.s1 {
+  background-image: image_url("BG_2.jpg");
+}
+.default-img {
+  background-image: image_url("BG.jpg");
+}
+.app-store-bg {
+  background-image: image_url("BG_3.jpg");
+}
+#content-container.landing {
+  background-image: image_url("landingpic.png");
+  top: 0px;
+  height: 100%;
+  background-size: cover;
+  margin-top: 0px;
+}
+
+/** General Layout Within Content Boxes **/
+
+#content-box {
+  width: 720px;
+  margin: 0 auto;
+  margin-top: 12vh;
+  position: relative;
+  border-radius: 3px;
+}
+
+.pad-container {
+  width: calc(100% - 80px);
+  padding: 0px 40px;
+}
+
+.box-content {
+  width: 100%;
+  background: white;
+}
+
+.content-row {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.full-white-block {
+  width: 100%;
+  background: white;
+  text-align: center;
+}
+
+.full-grey-block {
+  width: 100%;
+  background: $light-grey;
+  text-align: center;
+}
+
+.padded {
+  padding: 20px 0px;
+}
+
+.small-padded {
+  padding: 10px 0px;
+}
+
+.grey-header {
+  box-sizing: border-box;
+  padding-left: 10px;
+  width: 100%;
+  text-align: left;
+  height: 30px;
+  line-height: 30px;
+  background: $light-grey;
+}
+
+#content-container.generic {
+	background: white;
+}
+
+#content-container.generic.no-top {
+  border-top: 0px;
+}
+
+.bottom-btn-container {
+  	bottom: 0;
+  	height: 40px;
+  	width: 100%;
+  	background: none;
+    left: 0;
+    z-index: 2;
+  	.btn, .btn-rnd {
+  		width: 100%;
+  		height: 40px;
+  		position: fixed;
+  		line-height: 40px;
+  		bottom: 0;
+      border: none;
+      padding: 0;
+      z-index: 3;
+  	}
+  }
+
+/********* Media Queries **************/
+
+
+@media (min-width: 1024px) {
+	body #content-container.generic {
+		width: 720px;
+		left: calc(50% - 360px);
+	}
+  #poll-creator form > * {
+    padding: 0px 40px;
+    box-sizing: border-box;
+  }
+  .bottom-btn-container {
+    position: absolute;
+    bottom: 0;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    background: $light-grey;
+    .btn, .btn-rnd {
+      width: 720px;
+      margin: 20px calc(50% - 360px);
+      position: absolute;
+      font-size: 16px;
+    }
+  }
+
+	.double.bottom-btn-container {
+		.btn, .btn-rnd {
+			position: static;
+      width: 350px;
+			margin-left: 30px;
+			font-size: 16px;
+			float: left;
+			margin-top: 20px;
+			margin-left: 20px;
+			margin-right: 0px;
+		}
+    .btn.first {
+      margin-left: calc(50% - 360px);
+    }
+	}
+}
+body .double.bottom-btn-container.double-row {
+
+  .btn, .btn-rnd {
+    position: absolute;
+    width: 100%;
+    border-radius: 0px;
+    left: 0;
+    margin: 0;
+  }
+  .btn-top {
+    bottom: 40px;
+  }
+  .btn-bot {
+    bottom: 0px;
+  }
+}
+
+body .bottom-btn-container.static {
+  position: static;
+  margin-top: 40px;
+}
+
+
+@media (min-width: 1024px) {
+  #content-container.generic {
+    margin-top: 40px;
+    margin-bottom: 120px;
+    min-height: calc(100% - 220px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    .bottom-btn-container {
+      position: fixed;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  #content-container.generic.no-scroll {
+    margin-bottom: 0px;
+    min-height: 0px;
+    max-height: calc(100% - 220px);
+    height: calc(100% - 220px);
+  }
+  .side-margined {
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+
+/********** Reduced font sizes, added styling for icons in the header  ************/
+
+@media (max-width: 1023px) {
+	body {
+    #content-container.generic {
+      margin-top: 0px;
+      
+    }
+    #poll-creator form > *  {
+      padding: 0px 10px;
+      box-sizing: border-box;
+    }
+    #poll-creator form .bottom-btn-container {
+      padding: 0px;
+    }
+		.double.bottom-btn-container {
+			height: 80px;
+			.btn, .btn-rnd {
+				position: static;
+				width: 100%;
+				font-size: 16px;
+				float: left;
+				margin: 0;
+			}
+		}
+    .double.bottom-btn-container.full-fixed {
+      position: fixed;
+    }
+    
+    .pad-container {
+      padding: 0px 10px;
+      width: calc(100% - 20px);
+    }
+		background: none;
+		.desk-text-header {
+			display: none;
+		}
+		#main-header {
+			font-size: 17px;
+			height: 44px;
+			line-height: 40px;
+			box-shadow: none;
+		}
+		#header-right-pic {
+			display: none;
+			line-height: 26px;
+			right: 10px;
+		}
+		#content-container {
+			position: absolute;
+			width: 100%;
+			height: calc(100% - 40px);
+			top: 44px;
+			margin-top:0px;
+		}
+		#content-container.default-img {
+			background-image: image_url("BG_2.png");
+			background-size: cover;
+			background-position: center;
+		}
+		.s1, #content-container.s2.default-img {
+			background: white;
+		}
+
+		#content-container.landing.default-img {
+			border-top: none;
+			height: calc(100% - 60px);
+			top: 60px;
+		}
+		.main-logo {
+			display: none;
+			top: 5px;
+		}
+		.main-logo.text, .whos-going.text {
+			display: inline;
+			width: 200px;
+			text-align: center;
+			font-size: 17px;
+			height: 44px;
+			margin: 0;
+			position: absolute;
+			top: 0px;
+			line-height: 44px;
+			left: 40px;
+			left: calc(50% - 100px);
+		}
+		#sign-up-content, #sign-up-box {
+			width: 100%;
+		}
+		#sign-up-circle, #or, .landing form {
+			display: none;
+		}
+		#header-left {
+			position: absolute;
+      width: 25px;
+      height: 25px;
+      border-radius: 50px;
+      left: 10px;
+      top: 11px;
+		}
+		#header-right {
+			position: absolute;
+			height: 44px;
+			font-size: 17px;
+			line-height: 44px;
+			right: 10px;
+			color: white;
+		}
+	}
+
+}

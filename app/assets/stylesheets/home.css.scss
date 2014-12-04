@@ -1,0 +1,472 @@
+@import 'variables';
+
+
+@import 'variables';
+
+// <--------extensions------->
+
+.gradient{
+  background: -moz-linear-gradient(top,  rgba(0,102,76,0.8) 0%, rgba(0,70,145,0.9) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,102,76,0.8)), color-stop(100%,rgba(0,70,145,0.9))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  rgba(0,102,76,0.8) 0%,rgba(0,70,145,0.9) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  rgba(0,102,76,0.8) 0%,rgba(0,70,145,0.9) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  rgba(0,102,76,0.8) 0%,rgba(0,70,145,0.9) 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  rgba(0,102,76,0.8) 0%,rgba(0,70,145,0.9) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc00664c', endColorstr='#e6004691',GradientType=0 ); /* IE6-9 */
+}
+
+.blur{
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+// <--------background------->
+
+.blur-container{
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: absolute;
+}
+
+.blur-image{
+  background-image: asset-url('bginstagator.png');
+  background-size: cover;
+  width:102%;
+  height: 102%;
+  position: fixed;
+  left: -10px;
+  top: -10px;
+  z-index:1;
+
+}
+.glass{
+  background-color: rgba(0,0,0,0.60);
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  position: fixed;
+}
+
+/********* Header ********/
+
+#landing-header{
+  height: 80px;
+  width: 100%;
+  left: 0;
+  position: fixed;
+  z-index: 4;
+}
+
+#landing-logo {
+  position: fixed;
+  z-index: 4;
+  height: 50px;
+  left: 40px;
+  top: 15px;
+  max-width: 240px;
+  width: auto;
+}
+
+.header-link {
+  height: 60px;
+  float: right;
+  line-height: 60px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  padding: 0px 20px;
+  margin: 10px 40px;
+}
+
+.header-link:hover {
+  color: $black;
+  background: white;
+}
+
+
+/********  Mid Content **********/
+#mid-container{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#fade-2 {
+  opacity: 0;
+}
+
+.mid-section {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  color: white;
+  text-align: center;
+  z-index: 3;
+}
+
+.mid-section .title-landing-text {
+  position: absolute;
+  font-size: 48px;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  top: 40vh;
+}
+
+.showcase-subtext {
+  width: 500px;
+  left: calc(50% - 250px);
+  text-align: center;
+  font-size: 30px;
+  top: 50vh;
+  color: white;
+  position: absolute;
+}
+
+
+.container-gradient{
+  @extend .gradient;
+  width: 100%;
+  height: 200%;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+
+}
+
+.title-landing-text{
+  z-index: 2;
+  vertical-align: center;
+}
+
+#section-footer {
+  position: absolute;
+  bottom: 0;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  color: $green;
+  width: 100%;
+  background: white;
+  border-bottom: 1px solid #e7e7e7;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+/************  Showcase Content *************/
+
+
+#showcase-container {
+  position: absolute;
+  overflow-x: hidden;
+  top: 100%;
+  width: 100%;
+  left: 0;
+  background-size: cover;
+  z-index: 3;
+  height: 100%;
+  background: white;
+}
+
+#showcase-container {
+  .mid-section {
+    height: 100vh;
+    background: asset-url('waffleweave.png');
+  }
+}
+
+#phone-info {
+  position: absolute;
+  right: 0px;
+  top: 15vh;
+  width: 50%;
+  text-align: left;
+}
+
+
+.phone-info-item {
+  padding:  20px 0px;
+  padding-left: 60px;
+  cursor: pointer;
+}
+
+.info-item-name {
+  font-size: 30px;
+  color: $turq;
+  font-weight: 700;
+}
+
+.info-item-desc {
+  color: $dark-grey;
+  font-size: 18px;
+  margin: 20px 0px;
+}
+
+#iphone-1 {
+  width: auto;
+  height: 60vh;
+  position: absolute;
+  right: calc(50% + 60px);
+  top: 10vh;
+}
+
+#phone-side-text {
+  position: absolute;
+  right: 40px;
+  top: 40vh;
+  width: 250px;
+  text-align: left;
+  font-size: 24px;
+}
+
+#sit-back {
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  color: $dark-grey;
+  font-weight: 700;
+  font-size: 30px;
+  bottom: 20vh;
+}
+
+
+#get-started-button {
+  width: 500px;
+  left: calc(50% - 250px);
+  height: 60px;
+  line-height: 60px;
+  font-weight: 700;
+  font-size: 20px;
+  position: absolute;
+  bottom: 7%;
+  border-radius: 10px;
+}
+
+/************  Timeline Content *************/
+
+
+.timeline-container {
+  position: absolute;
+  left: 0;
+  top: 200%;
+  width: 100vw;
+  z-index: 3;
+  background-color: $green;
+  display: flex;
+}
+
+.timeline-left{
+  width: 50%
+}
+
+.timeline-right{
+  width: 50%;
+}
+
+.timeline-header{
+  margin-top: 15%;
+   
+  font-size: 36px;
+  color: white;
+  font-weight: 600;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+.left-side{
+  text-align: right;
+  margin-right: 10px;
+}
+
+.right-side{
+  text-align: left;
+  margin-left: 10px;
+}
+
+.timeline-content{
+  width:100%;
+  display:flex;
+  height: auto;
+}
+
+
+.timeline-line-container{
+  height: auto;
+  width: 40px;
+  position: relative;
+}
+
+.timeline-line-left{
+  width: 1px;
+  height: calc(100% - 105px);
+  position: absolute;
+  background-color: white;
+  top: 50px;
+  left: calc(50% - 0.5px);
+}
+.timeline-line-right{
+  width: 1px;
+  height: calc(100% - 105px);
+  position: absolute;
+  background-color: white;
+  top: 50px;
+  left: 50%;
+}
+
+.timeline-dots{
+  height: 11px;
+  width: 11px;
+  border-radius: 5px;
+  margin: 50px auto;
+  background-color: white;
+  margin-top: 50px;
+
+}
+
+.timeline-text-container{
+  width: calc(100% - 40px);
+  padding-top: 47px;
+}
+
+.timeline-text{
+  color: white;
+   
+  font-size: 15px;
+  line-height: 1.2;
+  height: 60.5px;
+}
+
+
+/***********  Media Queries   *****************/
+
+@media (max-width: 320px) {
+  body {
+    div#landing-header {
+      width: 320px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  body {
+    .timeline-container{
+      display: none;
+    }
+    #landing-header {
+      width: 100%;
+      left: 0;
+      text-align: center;
+    }
+    #section-footer {
+      height: 40px;
+      line-height: 40px;
+      font-size: 12px;
+      color: $dark-grey;
+    }
+    #landing-logo {
+      height: 40px;
+      position: static;
+      margin: 10px auto;
+    }
+    .mid-section {
+      .title-landing-text {
+        top: 25vh;
+        text-align: center;
+        font-size: 44px;
+        width: 100vw;
+        left: 0px;
+        line-height: 1.2
+      }
+    }
+    #iphone-1 {
+      margin: 40px auto;
+      position: static;
+      clear: left;
+      height: 70vh;
+    }
+
+    #showcase-container, #mid-container {
+      width: 100%;
+      left: 0;
+      right: 0;
+    }
+    #showcase-container {
+      height: auto;
+    }
+    .showcase-title-text {
+      top: 25vh;
+    }
+    .showcase-subtext {
+      width: 100%;
+      left: 0;
+      top: 60vh;
+      font-size: 25px;
+    }
+    .blur-image {
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
+    #fade-2 .title-landing-text {
+      top: 20vh;
+    }
+    .mid-sub-text {
+      width: calc(100% - 40px);
+      left: 20px;
+    }
+    #showcase-container .mid-section.last {
+      height: auto;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+    #phone-info {
+      position: static;
+      width: 100%;
+      text-align: center;
+      clear: left;
+    }
+    .phone-info-item {
+      padding:  0px;
+      cursor: pointer;
+      margin: 50px auto 0px auto;
+      width: calc(100% - 30px);
+    }
+    .info-item-desc {
+      margin: 15px 0px;
+      font-size: 17px;
+    }
+    .info-item-name{
+      font-size: 20px;
+    }
+    #sit-back {
+      position: static;
+      width: calc(100% - 40px);
+      margin: 40px 20px;
+      font-size: 20px;
+    }
+    #get-started-button {
+      width: 100%;
+      position: static;
+      border-radius: 0px;
+      font-size: 15px;
+      font-weight: 400;
+      margin: 0 auto;
+    }
+    .showcase-title-text, .title-landing-text, .showcase-subtext {
+      width: calc(100% - 20px);
+      left: 10px;
+    }
+
+  }
+}

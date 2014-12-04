@@ -1,0 +1,111 @@
+@import '../variables';
+
+.btn {
+	color: white;
+	cursor: pointer;
+	text-align: center;
+	box-sizing: border-box;
+	 
+	font-size: 16px;
+	font-weight: 400;
+}
+
+body .btn.inactive, body .btn.inactive:hover {
+	background: $border-grey;
+	color: $grey;
+}
+
+.blue-btn {
+  background: $blue;
+}
+
+.black-btn {
+	background: $dark-grey;
+}
+
+.red-btn {
+	background: $red;
+}
+
+.green-btn {
+	background: $green;
+}
+
+.grey-btn {
+	background: $tab-dark-grey;
+	color: $dark-grey;
+}
+
+
+.bottom-btn-container {
+	.black-btn:hover {
+		background: white;
+		color: $dark-grey;
+		border: 1px solid $dark-grey;
+	}
+
+	.blue-btn:hover {
+	  background: #0058b4;
+	  color: white;
+	}
+
+	.red-btn:hover {
+		background: white;
+		border: 1px solid $red;
+		color: $red;
+	}
+
+	.green-btn:hover {
+		background: #00aa80;
+		color: white;
+	}
+	.grey-btn:hover {
+		background: $border-grey;
+	}
+
+}
+.grey-btn:hover {
+	background: $border-grey;
+}
+
+.black-btn:hover {
+		background: white;
+		color: $dark-grey;
+		border: 1px solid $dark-grey;
+	}
+
+	.blue-btn:hover {
+	  background: #0058b4;
+	  color: white;
+	}
+
+
+	.red-btn:hover {
+		background: white;
+		border: 1px solid $red;
+		color: $red;
+	}
+
+	.green-btn:hover {
+		background: #00aa80;
+		color: white;
+	}
+
+
+
+.pull-bottom-btn {
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* .btn are square in mobile */
+
+.btn-rnd {
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  box-sizing: border-box;
+}

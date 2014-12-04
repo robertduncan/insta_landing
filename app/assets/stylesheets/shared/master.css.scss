@@ -1,0 +1,164 @@
+@import '../variables';
+
+/**  Form Elements **/
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+input, select {
+    -webkit-appearance: none;
+}
+
+div, input {
+  -webkit-transition: background .5s;
+}
+
+/** Backgrounds **/
+
+.white-back {
+  background: white;
+}
+
+.gray-back {
+  background: $light-grey;
+}
+
+.opaque {
+  background: rgba(255,255,255,.9);
+}
+
+.hidden {
+  display: none;
+}
+
+
+/** Text Formatting **/
+
+a {
+  text-decoration: none;
+  color: $black;
+}
+
+.no-break {
+  word-break: normal;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.main-text {
+  font-size: 30px;
+}
+
+.medium-text {
+  font-size: 16px;
+}
+
+.mobile-text{
+  font-size: 14px;
+}
+
+.desk-text{
+  font-size: 16px;
+}
+
+.sub-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-middle {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mobile {
+  display: none;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue
+}
+
+.red {
+  color: $red;
+}
+
+.grey {
+  color :$grey;
+}
+
+/***********  Media Queries *******************/
+
+@media (min-width: 1024px) {
+  .gray-back.generic {
+    background: white;
+  }
+}
+
+
+/************** elements with the class mobile shown, no-mobile are hidden  *****************/
+
+@media (max-width: 1023px) {
+  .no-mobile {
+    display: none;
+  }
+  body {
+    font-weight: 400;
+    .main-text {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    .sub-text {
+      font-weight: 400;
+      font-size: 12px;
+    }
+    .btn {
+      border-radius: 0px;
+    }
+    .mobile.hidden {
+      display: none;
+    }
+    .mobile {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    .pull-bottom-btn {
+      position: static;
+      width: 20vw;
+      margin: 40px auto;
+    }
+  }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+  select:focus,
+  textarea:focus,
+  input:focus {
+    font-size: 16px;
+  }
+}
